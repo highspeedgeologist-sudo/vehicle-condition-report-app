@@ -1,1 +1,38 @@
-
+{
+  "Screen": {
+    "Name": "scrVehicleReport",
+    "Controls": [
+      {
+        "Control": "EditForm",
+        "Name": "frmVehicleReport",
+        "Properties": {
+          "DataSource": "VehicleConditionReports",
+          "DefaultMode": "FormMode.New",
+          "Fields": [
+            { "DataField": "Title", "DisplayName": "Vehicle Registration Number" },
+            { "DataField": "DefectDescription", "DisplayName": "Defect Description" },
+            { "DataField": "ReportedBy", "DisplayName": "Reported By" },
+            { "DataField": "ReportDate", "DisplayName": "Report Date" },
+            { "DataField": "Attachments", "DisplayName": "Upload Picture" }
+          ]
+        }
+      },
+      {
+        "Control": "Button",
+        "Name": "btnSubmit",
+        "Properties": {
+          "Text": "\"Submit\"",
+          "OnSelect": "SubmitForm(frmVehicleReport); If(frmVehicleReport.Error = \"\", Notify(\"Report submitted successfully!\", NotificationType.Success), Notify(\"Error submitting report. Please try again.\", NotificationType.Error))"
+        }
+      },
+      {
+        "Control": "Button",
+        "Name": "btnReset",
+        "Properties": {
+          "Text": "\"Reset\"",
+          "OnSelect": "ResetForm(frmVehicleReport)"
+        }
+      }
+    ]
+  }
+}
