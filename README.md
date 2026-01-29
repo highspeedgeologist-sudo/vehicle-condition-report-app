@@ -15,3 +15,4 @@
 - Report Date
 - Attachment field for pictures
 - Submit & Reset buttons
+- Styled UI with header, colors, and mobile-friendly layout
